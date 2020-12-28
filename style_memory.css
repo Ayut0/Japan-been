@@ -1,0 +1,65 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.container>h1{
+  justify-content: center;
+}
+
+.text-wrapper{
+  display: inline-flex;
+  height: 25%;
+  /* justify-content: center; */
+  margin-bottom: 30px;
+}
+.text-wrapper>input{
+  height: 100px;
+  width: 85%;
+  margin-top: 10px;
+}
+.btn-section{
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.btn-section>input{
+  padding: 10px;
+  border-radius: 4px;
+  width: 30%;
+}
+
+/* 写真エリア */
+.photo-section{
+  position: relative;
+  height:180px;
+  width: 320px;
+}
+
+.photo-section>img{
+  height: 180px;
+  width: 320px;
+}
+
+.photo-section>label>input{
+  display: none;
+}
+
+.input-button::before{
+  background: #616161;
+  border-radius: 50%;
+  color: #fff;
+  content: "+";
+  cursor: pointer;
+  font-size: 1.5rem;
+  opacity: 0.9;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  line-height: 3rem;
+  height: 3rem;
+  text-align: center;
+  width: 3rem;
+}

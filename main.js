@@ -1,0 +1,254 @@
+'use strict'
+{
+  // モーダル関係。
+  // それぞれの地方ごとの県に共通のクラス名を付与しクリックイベントを実装
+  // 各都道府県をHTMLから取得するためにNodeListとして取得しているため、このままではaddEventListenerが使えない
+  // NodeListは要素の集合体（配列みたいなもの）
+  // それを解決するためにスプレッド演算子[...]で展開し、forEachでそれぞれの要素（都道府県）にクリックイベントを付与
+  
+  // 北海道・東北
+  const hokkaidotohoku = document.querySelectorAll('.hokkaido-tohoku');
+  const close1 = document.getElementById('close1');
+  const modal1 = document.getElementById('modal1');
+  const mask1 = document.getElementById('mask1');
+  
+  // 表示のクリックイベント
+  [...hokkaidotohoku].forEach(hokkaidotohoku=>{
+    hokkaidotohoku.addEventListener('click',(e)=>{
+      modal1.classList.remove('hidden');
+      mask1.classList.remove('hidden');
+    });
+  });
+    
+  // 閉じるときのクリックイベント
+  close1.addEventListener('click',function(){
+    modal1.classList.add('hidden');
+    mask1.classList.add('hidden');
+    });
+    
+  // マスク（黒くなっている背景のクリックイベント）
+  mask1.addEventListener('click',function(){
+    modal1.classList.add('hidden');
+    mask1.classList.add('hidden');
+    });
+  
+  // 関東地方
+  const kanto = document.querySelectorAll('.kanto');
+  const close2 = document.getElementById('close2');
+  const modal2 = document.getElementById('modal2');
+  const mask2 = document.getElementById('mask2');
+  
+  // 表示のクリックイベント
+  [...kanto].forEach(kanto=>{
+    kanto.addEventListener('click',(e)=>{
+      modal2.classList.remove('hidden');
+      mask2.classList.remove('hidden');
+    });
+  });
+    
+  // 閉じるときのクリックイベント
+  close2.addEventListener('click',function(){
+    modal2.classList.add('hidden');
+    mask2.classList.add('hidden');
+    });
+    
+  // マスク（黒くなっている背景のクリックイベント）
+  mask2.addEventListener('click',function(){
+    modal2.classList.add('hidden');
+    mask2.classList.add('hidden');
+    });
+    
+  // 中部地方 
+  const chubu = document.querySelectorAll('.chubu');
+  const close3 = document.getElementById('close3');
+  const modal3 = document.getElementById('modal3');
+  const mask3 = document.getElementById('mask3');
+    
+  // 表示のクリックイベント
+  [...chubu].forEach(chubu=>{
+    chubu.addEventListener('click',function(){
+    modal3.classList.remove('hidden');
+    mask3.classList.remove('hidden');
+    });
+  });
+      
+  // 閉じるときのクリックイベント
+  close3.addEventListener('click' ,function(){
+    modal3.classList.add('hidden');
+    mask3.classList.add('hidden');
+  });
+      
+  // マスク（黒くなっている背景のクリックイベント）
+  mask3.addEventListener('click',function(){
+    modal3.classList.add('hidden');
+    mask3.classList.add('hidden');
+  });
+    
+  // 近畿地方
+  const kinki = document.querySelectorAll('.kinki');
+  const close4 = document.getElementById('close4');
+  const modal4 = document.getElementById('modal4');
+  const mask4 = document.getElementById('mask4');
+      
+  // 表示のクリックイベント
+  [...kinki].forEach(kinki=>{
+    kinki.addEventListener('click',function(){
+      modal4.classList.remove('hidden');
+      mask4.classList.remove('hidden');
+    });
+  });
+        
+  // 閉じるときのクリックイベント
+  close4.addEventListener('click' ,function(){
+    modal4.classList.add('hidden');
+    mask4.classList.add('hidden');
+  });
+        
+  // マスク（黒くなっている背景のクリックイベント）
+  mask4.addEventListener('click',function(){
+    modal4.classList.add('hidden');
+    mask4.classList.add('hidden');
+  });
+  
+  // 中国地方
+  const chugoku = document.querySelectorAll('.chugoku');
+  const close5 = document.getElementById('close5');
+  const modal5 = document.getElementById('modal5');
+  const mask5 = document.getElementById('mask5');
+      
+  // 表示のクリックイベント
+  [...chugoku].forEach(chugoku=>{
+    chugoku.addEventListener('click',function(){
+      modal5.classList.remove('hidden');
+      mask5.classList.remove('hidden');
+    });
+  });
+        
+  // 閉じるときのクリックイベント
+  close5.addEventListener('click' ,function(){
+    modal5.classList.add('hidden');
+    mask5.classList.add('hidden');
+  });
+        
+  // マスク（黒くなっている背景のクリックイベント）
+  mask5.addEventListener('click',function(){
+    modal5.classList.add('hidden');
+    mask5.classList.add('hidden');
+  });
+  
+  // 四国地方
+  const shikoku = document.querySelectorAll('.shikoku');
+  const close6 = document.getElementById('close6');
+  const modal6 = document.getElementById('modal6');
+  const mask6 = document.getElementById('mask6');
+      
+  // 表示のクリックイベント
+  [...shikoku].forEach(shikoku=>{
+    shikoku.addEventListener('click',function(){
+      modal6.classList.remove('hidden');
+      mask6.classList.remove('hidden');
+    });
+  });
+        
+  // 閉じるときのクリックイベント
+  close6.addEventListener('click' ,function(){
+    modal6.classList.add('hidden');
+    mask6.classList.add('hidden');
+  });
+        
+  // マスク（黒くなっている背景のクリックイベント）
+  mask6.addEventListener('click',function(){
+    modal6.classList.add('hidden');
+    mask6.classList.add('hidden');
+  });
+
+  // 九州・沖縄
+  const kyusyuokinawa = document.querySelectorAll('.kyu-oki');
+  const close7 = document.getElementById('close7');
+  const modal7 = document.getElementById('modal7');
+  const mask7 = document.getElementById('mask7');
+      
+  // 表示のクリックイベント
+  [...kyusyuokinawa].forEach(kyusyuokinawa=>{
+    kyusyuokinawa.addEventListener('click',function(){
+      modal7.classList.remove('hidden');
+      mask7.classList.remove('hidden');
+    });
+  });
+        
+  // 閉じるときのクリックイベント
+  close7.addEventListener('click' ,function(){
+    modal7.classList.add('hidden');
+    mask7.classList.add('hidden');
+  });
+        
+  // マスク（黒くなっている背景のクリックイベント）
+  mask7.addEventListener('click',function(){
+    modal7.classList.add('hidden');
+    mask7.classList.add('hidden');
+  });
+  
+
+  // サーチアイコンのクリックイベント
+  const search = document.getElementById('js-search-icon');
+  const search_modal = document.getElementById('js-search-modal');
+  console.log(search);
+
+  search.addEventListener('click',function(){
+    search_modal.classList.remove('hidden');
+    
+  });
+
+}
+
+
+// 複数モーダル
+      // let area = document.querySelectorAll('.area');
+      // // console.log(area);
+      // const close = document.querySelectorAll('.close');
+      // const modal = document.querySelectorAll('.modal');
+      // const mask = document.querySelectorAll('.mask');
+    
+      // let modalCloseAction;
+      // let dataModalOpen;
+      // let targetModal;
+    
+      // for(let i = 0; i < dataModalOpen.length; i++){
+      //   // モーダルを隠す処理
+      //   modalCloseAction = function(e){
+      //     targetModal = e.currentTarget.closest('.modal');
+      //     targetModal.classList.add('hidden');
+      //     mask.classList.add('hidden');
+      //   };
+    
+      //  // マスク（黒くなっている部分をクリックでモーダルを隠す）
+      //   const maskClose = function () { 
+      //     mask[i],addEventListener('click',function(e){
+      //       modalCloseAction(e);
+      //     },false);
+      //    };
+      
+      //   //  モーダルを表示
+      //   const modalOpen = function(e){
+      //     dataModalOpen = e.currentTarget.getAttribute('data-modal-open');
+      //      for(let b = 0; b<modal.length; b++){
+      //        if(modal[b].getAttribute('data-modal') === dataModalOpen){
+      //          modal[b].classList.remove('hidden');
+      //          maskClose();
+      //          return false;
+      //        }
+      //      }
+      //   };
+    
+      //   modalOpen[i].addEventListener('click',function(e){
+      //     modalOpen(e);
+      //   },false);
+      // }
+    
+      //   // モーダルを隠す
+      //   for(let c = 0; c<close.length; c++){
+      //     close[c].addEventListener('click',function(e){
+      //       modalCloseAction(e);
+      //       return false;
+      //     },false)
+      //   }
