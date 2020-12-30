@@ -10,9 +10,31 @@
   <link href="style_map.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <!-- サーチアイコンをクリックしたときのモーデル -->
+  <div id="js-search-modal" class="serach-modal hidden">
+    <section class="search-header">
+      <i class="fas fa-times fa-2x" id="js-cross"></i>
+      <h2>Select Prefecture</h2>
+      <i class="fas fa-check fa-2x"></i>
+    </section>
+    <form action="" class="search-form">
+      <i class="fas fa-search-plus"></i>
+      <input type="text" name="" id="search-input">
+      <span>Cancel</span>
+    </form>
+
+    <article>
+      <!-- 配列で追加するとDOM操作で追加する？それともあらかじめ作成しておく？→とりあえずDOMでcreateElement使ってみる。idをpref1~47としてDOMで付与していく -->
+      <ul>
+        <!-- ここに県を追加していく -->
+        <li><i class="fas fa-check-circle"></i></li>
+      </ul>
+    </article>
+  </div>
+
   <!-- ヘッダー -->
   <header>
-    <div class="header">
+    <div class="header" id="js-header">
       <h1 class="header-title">Japan been</h1>
       <div class="search">
         <i class="fas fa-search fa-2x" id="js-search-icon"></i>
@@ -24,6 +46,7 @@
         <div class="spinner horizontal"></div>
         <div class="spinner diagonal part-2"></div>
       </label>
+
       <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
           <li><a href="https://vanila.io" target="_blank">登録情報の編集</a></li>
@@ -147,29 +170,7 @@
       <div class="close" id="close7">閉じる</div>
     </section>
     <!-- ここまで地図をクリックしたときのモーダル -->
-
-    <!-- サーチアイコンをクリックしたときのモーデル -->
-    <div id="js-search-modal" class="serach-modal hidden">
-      <section class="search-header">
-        <i class="fas fa-times fa-2x"></i>
-        <h2>Select Prefecture</h2>
-        <i class="fas fa-check fa-2x"></i>
-      </section>
-      <form action="" class="search-form">
-        <i class="fas fa-search-plus"></i>
-        <input type="text" name="" id="search-input">
-        <span>Cancel</span>
-        
-      </form>
-
-      <article>
-        <!-- 配列で追加するとDOM操作で追加する？それともあらかじめ作成しておく？→とりあえずDOMでcreateElement使ってみる。idをpref1~47としてDOMで付与していく -->
-        <ul>
-          <!-- ここに県を追加していく -->
-          <li><i class="fas fa-check-circle"></i></li>
-        </ul>
-      </article>
-    </div>
+    
 
     <!-- 日本地図の部分 -->
     <div id="japan-map" class="clearfix">
