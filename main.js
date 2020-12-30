@@ -190,13 +190,75 @@
   
 
   // サーチアイコンのクリックイベント
+  // 要素の取得
   const search = document.getElementById('js-search-icon');
   const search_modal = document.getElementById('js-search-modal');
-  console.log(search);
+  const header = document.getElementById('js-header');
+  const cross = document.getElementById('js-cross');
+  const jpmap = document.getElementById('japan-map');
 
+  const pref = [
+    '北海道',
+    '青森',
+    '秋田',
+    '岩手',
+    '山形',
+    '宮城',
+    '福島',
+    '群馬',
+    '栃木',
+    '茨城',
+    '埼玉',
+    '千葉',
+    '東京',
+    '神奈川',
+    '新潟',
+    '富山',
+    '石川',
+    '福井',
+    '長野',
+    '岐阜',
+    '山梨',
+    '愛知',
+    '静岡',
+    '京都',
+    '滋賀',
+    '大阪',
+    '奈良',
+    '三重',
+    '和歌山',
+    '兵庫',
+    '鳥取',
+    '岡山',
+    '島根',
+    '広島',
+    '山口',
+    '香川',
+    '愛媛',
+    '徳島',
+    '高知',
+    '福岡',
+    '佐賀',
+    '長崎',
+    '大分',
+    '熊本',
+    '宮崎',
+    '鹿児島',
+    '沖縄'
+  ];
+
+  // モーダルを開く
   search.addEventListener('click',function(){
     search_modal.classList.remove('hidden');
-    
+    header.classList.add('disable');
+    jpmap.classList.add('disable');
+  });
+
+  // モーダルを閉じる
+  cross.addEventListener('click' , function(){
+    search_modal.classList.add('hidden');
+    header.classList.remove('disable');
+    jpmap.classList.remove('disable');
   });
 
 }
