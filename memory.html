@@ -9,9 +9,9 @@
 <body>
   <div class="container">
     <h2>〜の思い出を記録する</h2>
-    <div class="section"><span>1</span>どんな思い出？</div>
+    <div class="item1"><span>1</span>どんな思い出？</div>
     <div class="text-wrapper">
-      <input type="text">
+      <textarea name="message" id="detail" cols="30" rows="10" minlength="10" maxlength="141"></textarea>
     </div>
     <!-- 写真登録 -->
     <div class="photo-section">
@@ -23,7 +23,7 @@
     </div>
     <!-- 登録ボタン -->
     <div class="btn-section">
-      <input type="submit" value="保存">
+      <input type="submit" value="保存" class="savebtn">
     </div>
   </div>
   <script src="image-upload.js"></script>

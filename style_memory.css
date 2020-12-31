@@ -1,41 +1,75 @@
+body{
+  font-family: Arial, Helvetica, sans-serif,'ヒギラノ角ゴシック';
+}
+
 .container{
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .container>h1{
   justify-content: center;
 }
 
+.container>.item1{
+  padding: 0.25em 0.5em;
+  color: #494949;
+  background: transparent;
+  border-left: solid 5px #7db4e6;
+  text-align: left;
+  width: 100%;
+  font-size: 20px;
+}
+
 .text-wrapper{
   display: inline-flex;
   height: 25%;
+  width: 100%;
   /* justify-content: center; */
   margin-bottom: 30px;
 }
-.text-wrapper>input{
+.text-wrapper>#detail{
   height: 100px;
-  width: 85%;
+  width: 100%;
   margin-top: 10px;
+  border: 1px solid ;
+  border-radius: 4px;
 }
 .btn-section{
   display: inline-flex;
   justify-content: center;
   margin-top: 60px;
+  width: 100%;
 }
 
-.btn-section>input{
-  padding: 10px;
-  border-radius: 4px;
-  width: 30%;
+.btn-section>.savebtn{
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  background: #87befd;
+  color: #fff;
+  font-size: 24px;
+  width: 100px;
+  height: 100px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.savebtn:hover{
+  background: #668ad8;
 }
 
 /* 写真エリア */
 .photo-section{
   position: relative;
   height:180px;
-  width: 320px;
+  width: 100%;
 }
 
 .photo-section>img{
@@ -63,3 +97,4 @@
   text-align: center;
   width: 3rem;
 }
+
