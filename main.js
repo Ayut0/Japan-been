@@ -264,10 +264,6 @@
   // Web Share API
   const testbtn = document.getElementById('test');
 
-  
-
-  console.log(navigator.share);
-
   testbtn.addEventListener('click', async function share(){
     if (!navigator.share) {
       alert('ご利用のブラウザでは共有できません。');
@@ -276,17 +272,17 @@
 
     try{
       await window.navigator.share({
-        title:'Share API で共有',
+        title:'うまく反映されない',
         text:'共有テスト',
-        url:'https://example.com/hogehoge',
+        url:location.href,
       });
       alert('共有できました。');
     }catch(e){
       console.log(e.message);
     }
-  }
-  
-  )
+  });
+
+
 
 }
 
