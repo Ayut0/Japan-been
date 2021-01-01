@@ -272,7 +272,7 @@
       await window.navigator.share({
         title:'Share API で共有',
         text:'共有テスト',
-        url:'https://example.com/hogehoge'
+        url:'https://example.com/hogehoge',
       });
       alert('共有できました。');
     }catch(e){
