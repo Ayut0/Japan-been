@@ -40,7 +40,7 @@
   
   // 表示のクリックイベント
   [...kanto].forEach(kanto=>{
-    kanto.addEventListener('click',(e)=>{
+    kanto.addEventListener('click',function(){
       modal2.classList.remove('hidden');
       mask2.classList.remove('hidden');
     });
@@ -260,6 +260,25 @@
     header.classList.remove('disable');
     jpmap.classList.remove('disable');
   });
+
+  // Web Share API
+  async function share(){
+    if (!window.navigator.share) {
+      alert('ご利用のブラウザでは共有できません。');
+      return;
+    }
+
+    try{
+      await window.navigator.share({
+        title:'Share API で共有',
+        text:'共有テスト',
+        url:'https://example.com/hogehoge'
+      });
+      alert('共有できました。');
+    }catch(e){
+      console.log(e.message);
+    }
+  }
 
 }
 

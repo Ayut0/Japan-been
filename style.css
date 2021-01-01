@@ -5,6 +5,7 @@ header{
   color: #fff;
   display: inline-block;
   align-items: center;
+  width: 100%;
 }
 
 #js-header.disable{
@@ -46,6 +47,7 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+    z-index: 20;
 }
 
 
@@ -290,4 +292,26 @@ nav>li{
 #js-search-modal.hidden{
     /* transform: translate(0,1500px); */
     display: none;
+}
+
+main{
+    height: 100%;
+    
+}
+
+/* フッター */
+footer{
+    background-color: rgba(109, 106, 106, 0.211);
+    height: 100px;
+}
+
+
+footer>.snsshare>ul{
+    padding-left: 10px;
+    margin-top: 0;
+    width: 50%;
+}
+
+footer>.snsshare>ul>li{
+    list-style: none;
 }
