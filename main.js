@@ -262,8 +262,14 @@
   });
 
   // Web Share API
-  async function share(){
-    if (!window.navigator.share) {
+  const testbtn = document.getElementById('test');
+
+  
+
+  console.log(navigator.share);
+
+  testbtn.addEventListener('click', async function share(){
+    if (!navigator.share) {
       alert('ご利用のブラウザでは共有できません。');
       return;
     }
@@ -279,6 +285,8 @@
       console.log(e.message);
     }
   }
+  
+  )
 
 }
 
