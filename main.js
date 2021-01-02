@@ -195,7 +195,8 @@
   const search_modal = document.getElementById('js-search-modal');
   const header = document.getElementById('js-header');
   const cross = document.getElementById('js-cross');
-  const jpmap = document.getElementById('japan-map');
+  const jpMap = document.getElementById('japan-map');
+  const prefList = document.getElementById('js-pref-list')
 
   const pref = [
     '北海道',
@@ -247,24 +248,44 @@
     '沖縄'
   ];
 
+  // 県一覧をを追加
+  (function(){
+    const prefFragment = document.createDocumentFragment();
+    
+    for (let prefI = 0, len=pref.length; prefI<len;prefI++){
+      let $li = document.createElement('li');
+      let prefLi = document.createTextNode(pref[prefI]);
+      $li.appendChild(prefLi);
+      prefFragment.appendChild($li);
+    }
+      prefList.appendChild(prefFragment);
+  })();
+  
   // モーダルを開く
   search.addEventListener('click',function(){
+
+    // モーダルの表示
     search_modal.classList.remove('hidden');
+    // トップ画面を隠す
     header.classList.add('disable');
-    jpmap.classList.add('disable');
+    jpMap.classList.add('disable');
+    
   });
 
   // モーダルを閉じる
   cross.addEventListener('click' , function(){
+
+
     search_modal.classList.add('hidden');
     header.classList.remove('disable');
-    jpmap.classList.remove('disable');
+    jpMap.classList.remove('disable');
   });
 
   // Web Share API
-  const testbtn = document.getElementById('test');
+  const testBtn = document.getElementById('test');
 
-  testbtn.addEventListener('click', async function share(){
+
+  testBtn.addEventListener('click', async function share(){
     if (!navigator.share) {
       alert('ご利用のブラウザでは共有できません。');
       return;

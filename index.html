@@ -10,7 +10,7 @@
   <link href="style_map.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <!-- サーチアイコンをクリックしたときのモーデルあああああ -->
+  <!-- サーチアイコンをクリックしたときのモーデル -->
   <div id="js-search-modal" class="serach-modal hidden">
     <section class="search-header">
       <i class="fas fa-times fa-2x" id="js-cross"></i>
@@ -23,9 +23,10 @@
       <span>Cancel</span>
     </form>
 
+    <!-- 県名一覧 -->
     <article>
       <!-- 配列で追加するとDOM操作で追加する？それともあらかじめ作成しておく？→とりあえずDOMでcreateElement使ってみる。idをpref1~47としてDOMで付与していく -->
-      <ul>
+      <ul id="js-pref-list"> 
         <!-- ここに県を追加していく -->
         <li><i class="fas fa-check-circle"></i></li>
       </ul>
@@ -463,13 +464,8 @@
   </main>
   <footer>
     <section class="snsshare">
-      <span>Japan beenをSNSでシェア</span>
-      <input type="button" value="テスト" id="test">
-      <!-- <ul>
-        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
-        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-        <li><a href=""><i class="fab fa-line"></i></a></li>
-      </ul> -->
+      <i class="fas fa-external-link-alt"></i>
+      <span id="test">Japan beenをSNSでシェア</span>
     </section>
   </footer>
   <!-- JS読み込み -->
