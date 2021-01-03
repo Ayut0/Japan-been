@@ -257,13 +257,28 @@
       let prefLi = document.createTextNode(pref[prefI]);
       $li.appendChild(prefLi);
       prefFragment.appendChild($li);
+      // idを付与
+      $li.setAttribute('id', 'jsPref'+prefI);
+      // クラスを付与
+      $li.classList.add('searchPref');
     }
       prefList.appendChild(prefFragment);
   })();
-  
-  // モーダルを開く
-  search.addEventListener('click',function(){
 
+  // 県一覧のクリックイベント（selectedクラスのつけ外しで灰色or水色にする）
+  document.addEventListener('DOMContentLoaded' , function(){
+    let searchPref = document.querySelectorAll('.searchPref');
+    // console.log(searchPref);
+    for (let i = 0;i<searchPref.length; i++){
+      searchPref[i].addEventListener('click' , function(){
+        this.classList.toggle('selected');
+      },false);
+    }
+  },false);
+
+  
+  // アイコンをクリックしてモーダルを開く
+  search.addEventListener('click',function(){
     // モーダルの表示
     search_modal.classList.remove('hidden');
     // トップ画面を隠す
@@ -272,25 +287,20 @@
     
   });
 
-  // モーダルを閉じる
+  // ×をクリックしてモーダルを閉じる
   cross.addEventListener('click' , function(){
-
-
     search_modal.classList.add('hidden');
     header.classList.remove('disable');
     jpMap.classList.remove('disable');
   });
 
   // Web Share API
-  const testBtn = document.getElementById('test');
-
-
+  const testBtn = document.getElementById('js-test');
   testBtn.addEventListener('click', async function share(){
     if (!navigator.share) {
       alert('ご利用のブラウザでは共有できません。');
       return;
     }
-
     try{
       await window.navigator.share({
         title:'うまく反映されない',
