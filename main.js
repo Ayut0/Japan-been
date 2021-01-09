@@ -278,12 +278,6 @@
 
 
   // モーダル内のリアルタイム絞り込み機能
-  // let $lists = document.getElementsByClassName('searchPref');
-  // console.log($lists);
-  // let li = $lists[0].innerHTML.toLocaleUpperCase();
-  // console.log(li);
-  
-    
     let searchInput = document.getElementById('search-input'); //モーダル内の検索フォームを取得
     searchInput.addEventListener('input' , function(){
     let filter = searchInput.value.toUpperCase(); //入力された文字を取得
@@ -347,53 +341,3 @@
 }
 
 
-// 複数モーダル
-      // let area = document.querySelectorAll('.area');
-      // // console.log(area);
-      // const close = document.querySelectorAll('.close');
-      // const modal = document.querySelectorAll('.modal');
-      // const mask = document.querySelectorAll('.mask');
-    
-      // let modalCloseAction;
-      // let dataModalOpen;
-      // let targetModal;
-    
-      // for(let i = 0; i < dataModalOpen.length; i++){
-      //   // モーダルを隠す処理
-      //   modalCloseAction = function(e){
-      //     targetModal = e.currentTarget.closest('.modal');
-      //     targetModal.classList.add('hidden');
-      //     mask.classList.add('hidden');
-      //   };
-    
-      //  // マスク（黒くなっている部分をクリックでモーダルを隠す）
-      //   const maskClose = function () { 
-      //     mask[i],addEventListener('click',function(e){
-      //       modalCloseAction(e);
-      //     },false);
-      //    };
-      
-      //   //  モーダルを表示
-      //   const modalOpen = function(e){
-      //     dataModalOpen = e.currentTarget.getAttribute('data-modal-open');
-      //      for(let b = 0; b<modal.length; b++){
-      //        if(modal[b].getAttribute('data-modal') === dataModalOpen){
-      //          modal[b].classList.remove('hidden');
-      //          maskClose();
-      //          return false;
-      //        }
-      //      }
-      //   };
-    
-      //   modalOpen[i].addEventListener('click',function(e){
-      //     modalOpen(e);
-      //   },false);
-      // }
-    
-      //   // モーダルを隠す
-      //   for(let c = 0; c<close.length; c++){
-      //     close[c].addEventListener('click',function(e){
-      //       modalCloseAction(e);
-      //       return false;
-      //     },false)
-      //   }

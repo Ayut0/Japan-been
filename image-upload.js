@@ -30,3 +30,9 @@ const uploadImageModule = (() =>{
     reader.readAsDataURL(file);
   });
 })();
+
+// トップページに戻る
+const backBtn = document.getElementById('js-backBtn');
+backBtn.addEventListener('click',function(){
+  location.href = 'index.html';
+});

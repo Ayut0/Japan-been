@@ -46,7 +46,7 @@ body{
   width: 100%;
 }
 
-.btn-section>.savebtn{
+.btn-section>.saveBtn,.backBtn{
   display: inline-block;
   text-decoration: none;
   border: none;
@@ -61,7 +61,7 @@ body{
   overflow: hidden;
 }
 
-.savebtn:hover{
+.saveBtn:hover,.backBtn:hover{
   background: #668ad8;
 }
 
