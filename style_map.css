@@ -113,6 +113,7 @@ a:hover {
 	height: 265px;
 	position: absolute;
 	left: 638px;
+	top: -90px;
 }
 #hokkaido-touhoku div.area div {
 	background-color: #7478c2;
@@ -162,14 +163,13 @@ a:hover {
 }
 
 /* 関東 */
-
-#kantou {
+#kantou{
 	width: 158px;
 	display: block;
 	height: 174px;
 	position: absolute;
-	top: 265px;
-	left: 623px;
+	top: 180px;
+	left: 625px;
 }
 #kantou div.area div {
 	background-color: #31beca;
@@ -212,20 +212,19 @@ a:hover {
 	left: 0px;
 }
 #kanagawa {
-	width: 67px;
+	width: 100px;
 	height: 42px;
 	top: 127px;
 	left: 0px;
 }
 
 /* 中部 */
-
 #tyubu {
 	width: 270px;
 	height: 211px;
 	position: absolute;
-	left: 438px;
-	top: 223px;
+	left: 440px;
+	top: 135px;
 }
 #tyubu div.area div {
 	background-color: #4ab969;
@@ -290,7 +289,7 @@ a:hover {
 	height: 211px;
 	position: absolute;
 	left: 320px;
-	top: 223px;
+	top: 138px;
 }
 #kinki div.area div {
 	background-color: #b0b72f;
@@ -301,11 +300,12 @@ a:hover {
 	width: 67px;
 	height: 84px;
 	left: 51px;
+	top: -3px;
 }
 #shiga {
 	width: 68px;
 	height: 42px;
-	top: 42px;
+	top: 40px;
 	left: 118px;
 }
 #osaka {
@@ -334,18 +334,18 @@ a:hover {
 }
 #hyougo {
 	width: 51px;
-	height: 98px;
+	height: 100px;
 	left: 0px;
+	top: -3px;
 }
 
 /* 中国 */
-
 #tyugoku {
 	width: 151px;
 	height: 98px;
 	position: absolute;
 	left: 169px;
-	top: 223px;
+	top: 135px;
 }
 #tyugoku div.area div {
 	background-color: #ef9f27;
@@ -386,7 +386,7 @@ a:hover {
 	height: 84px;
 	position: absolute;
 	left: 169px;
-	top: 350px;
+	top: 250px;
 }
 #shikoku div.area div {
 	background-color: #d08f68;
@@ -422,7 +422,7 @@ a:hover {
 	height: 247px;
 	position: absolute;
 	left: 0px;
-	top: 235px;
+	top: 135px;
 }
 #kyusyu div.area div {
 	background-color: #ff7575;
@@ -598,7 +598,7 @@ a:hover {
 
 /* 関東 */
 #kantou{
-	top: 270px;
+	top: 185px;
 	left: 190px;
 }
 
@@ -717,7 +717,7 @@ a:hover {
 /* 近畿 */
 
 #kinki{
-	top: 50px;
+	top: -77px;
 	left: 60px;
 }
 
@@ -769,7 +769,7 @@ a:hover {
 
 /* 中国地方 */
 #tyugoku{
-	top: 120px;
+	top: -7px;
 	left: 10px;
 }
 
@@ -806,7 +806,7 @@ a:hover {
 
 /* 四国地方 */
 #shikoku{
-	top: 440px;
+	top: 320px;
 	left: 0px;
 }
 
@@ -837,7 +837,7 @@ a:hover {
 
 /* 九州地方 */
 #kyusyu{
-	top: 500px;
+	top: 350px;
 	left: -40px;
 }
 

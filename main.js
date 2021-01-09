@@ -286,19 +286,16 @@
     for(let i = 0;i<$lists.length;i++){ //$lists.length は47
       let li = $lists[i].innerHTML; //i番目の県を取得
       if(li){
+        // 入力された文字(filter)とliが一致するかを判別する
         if(li.toUpperCase().indexOf(filter) > -1){
-          $lists[i].style.display = '';
+          $lists[i].style.display = ''; //一致した県はスタイルを変更せず
         }else{
-          $lists[i].style.display = 'none';
+          $lists[i].style.display = 'none'; //一致しなかった県にはdisplay:noneを付与して非表示にする
         }
       }
   };
 });
-  
-  
-    
 
-  
   // モーダル関係はclassList.toggleで書き換えられそう？
   // アイコンをクリックしてモーダルを開く
   search.addEventListener('click',function(){
@@ -335,8 +332,6 @@
       console.log(e.message);
     }
   });
-
-
 
 }
 
