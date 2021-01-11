@@ -1,4 +1,4 @@
-/* ヘッダー */
+/* header */
 header{
   height: 60px;
   /* margin-bottom: 60px; */
@@ -15,7 +15,8 @@ header{
 
 .header-title{
     margin: 0 auto;
-    line-height: 60px
+    line-height: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
@@ -41,7 +42,7 @@ body {
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    background-color: rgb(114, 233, 248);
+    background-color: rgb(96, 215, 231);
     position: fixed;
     height: 60px;
     overflow: hidden;
@@ -49,7 +50,6 @@ body {
     justify-content: space-between;
     z-index: 20;
 }
-
 
 .mainInner{
     display: table;
@@ -73,7 +73,7 @@ body {
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: rgba(53, 52, 52, 0.377);
+    background: rgba(61, 57, 57, 0.863);
     /* background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%); */
 }
 .sidebarMenuInner{
@@ -83,24 +83,24 @@ body {
 }
 .sidebarMenuInner li{
     list-style: none;
-    color: rgb(15, 14, 14);
     text-transform: uppercase;
     font-weight: bold;
     padding: 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
-.sidebarMenuInner li span{
+/* .sidebarMenuInner li span{
     display: block;
     font-size: 14px;
-    color:rgb(15, 14, 14);
-}
+    color:rgb(250, 245, 245);
+} */
 .sidebarMenuInner li a{
-    color:rgb(15, 14, 14);
+    color:rgb(247, 227, 227);
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    letter-spacing: 2px;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
@@ -183,7 +183,7 @@ nav>li{
   color: #ffffff;
 }
 
-/* モーダル部分 */
+/* modal */
 .modal>ul>a>li{
     list-style: none;
 }
@@ -199,8 +199,12 @@ nav>li{
     margin: 16px auto 0;
 }
 
+.close{
+    margin-bottom: 10px;
+}
+
 .close:hover{
-    background-color:  rgb(135, 229, 241);;
+    background-color:  rgb(157, 229, 238);;
 }
 
 .mask{
@@ -233,7 +237,6 @@ nav>li{
     flex-wrap: wrap;
     flex-direction: column;
     height: 150px;
-    /* column-count: 2; */
 }
 
 .modal>ul>a>li{
@@ -310,8 +313,6 @@ nav>li{
     display: none;
 }
 
-
-
 main{
     height: 100%;
 }
@@ -338,24 +339,56 @@ main{
     margin: 0;
 }
 
-/* フッター */
+/* Footer */
 footer{
     background-color: rgba(109, 106, 106, 0.211);
     height: 100px;
+    padding: 32px;
 }
 
 #js-test{
     cursor: pointer;
 }
 
-footer>.snsShare>ul{
-    padding-left: 10px;
-    margin-top: 0;
+.footer-snsSection{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.footerTitle{
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.snsIcon{
+    padding: 10px;
+    margin: 0 auto;
     width: 50%;
 }
 
-footer>.snsShare>ul>li{
-    list-style: none;
+.snsIcon>i{
+    padding: 5px;
+    justify-content: center;
+}
+
+footer>span{
+    display: block;
+    text-align: center;
+}
+
+.snsShare{
+    width: 100%;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.borderBottom{
+    margin: 0 auto;
+    width: 50%;
+    border-bottom: 1px solid rgb(99, 96, 96)
 }
 
 /* レスポンシブ */

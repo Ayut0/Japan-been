@@ -478,18 +478,21 @@ a:hover {
 }
 
 
-/****************************************
+/* ***************************************
 	レスポンシブ
 
-****************************************/
-/* @media screen and (max-width: 776px) {
-#japan-map {
-	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
-#japan-map p.area-title {
+*************************************** */
+@media screen and (min-width: 600px) {
+	/* body{
+		background-color: grey;
+	} */
+	#japan-map {
+		display: block;
+		width: 80%;
+		height: auto;
+		position: relative;
+	}
+/* #japan-map p.area-title {
 	display: inline-block;
 	width: 100%;
 	font-size: 15px;
@@ -497,19 +500,20 @@ a:hover {
 	margin-top: 1.5em;
 	margin-bottom: 1em;
 	color: #000000;
-}
-#hokkaido-touhoku, #kantou, #tyubu, #kinki, #tyugoku, #shikoku, #kyusyu {
+} */
+/* #hokkaido-touhoku, #kantou, #tyubu, #kinki, #tyugoku, #shikoku, #kyusyu {
 	display: block;
 	position: static;
 	margin: 0 1em 0 1em;
-}
-#japan-map div div.area {
+} */
+/* #japan-map div div.area {
 	display: block;
 	position: relative;
-}
+} */
 
-#hokkaido-touhoku {
+/* #hokkaido-touhoku {
 	height: calc(265px + 4.5em);
+	left: 350px;
 }
 #kantou {
 	height: calc(174px + 4.5em);
@@ -528,11 +532,11 @@ a:hover {
 }
 #kyusyu {
 	height: calc(247px + 4.5em);
+} */
 }
 
-}  */
 
-/* レスポンシブ max-776px */
+/* レスポンシブ max-776px
 
 /* レスポンシブ（スマホ） max-500px */
 
@@ -914,15 +918,5 @@ a:hover {
 	height: auto;
 	width: 25%;
 }
-/* #japan-map div div.area div {
- 	display: block;
-	border-radius: 0px;
-	position: static;
-	height: auto;
-	font-size: 16px;
-	width: 100%;
-	padding: 0.5em 0.3em 0.5em 0.3em;
-} */
-
 
 } 
