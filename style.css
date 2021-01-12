@@ -188,6 +188,8 @@ nav>li{
     list-style: none;
 }
 
+
+
 /* ボタン */
 #open,.close{
     cursor: pointer;
@@ -291,6 +293,11 @@ nav>li{
     line-height: 40px;
     color: rgb(163, 159, 163);
     cursor: pointer;
+    user-select: none;
+}
+
+#js-pref-list>li>.searchPref{
+    user-select: none;
 }
 
 #js-pref-list>.selected{

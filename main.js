@@ -249,21 +249,21 @@
   ];
 
   // 県一覧を追加
-  (function(){
-    const prefFragment = document.createDocumentFragment();
+  // (function(){
+  //   const prefFragment = document.createDocumentFragment();
     
-    for (let prefI = 0, len=pref.length; prefI<len;prefI++){
-      let $li = document.createElement('li');
-      let prefLi = document.createTextNode(pref[prefI]);
-      $li.appendChild(prefLi);
-      prefFragment.appendChild($li);
-      // idを付与
-      $li.setAttribute('id', 'jsPref'+prefI);
-      // クラスを付与
-      $li.classList.add('searchPref');
-    }
-      prefList.appendChild(prefFragment);
-  })();
+  //   for (let prefI = 0, len=pref.length; prefI<len;prefI++){
+  //     let $li = document.createElement('li');
+  //     let prefLi = document.createTextNode(pref[prefI]);
+  //     $li.appendChild(prefLi);
+  //     prefFragment.appendChild($li);
+  //     // idを付与
+  //     $li.setAttribute('id', 'jsPref'+prefI);
+  //     // クラスを付与
+  //     $li.classList.add('searchPref');
+  //   }
+  //     prefList.appendChild(prefFragment);
+  // })();
 
   // 県一覧のクリックイベント（selectedクラスのつけ外しで灰色or水色にする）
   document.addEventListener('DOMContentLoaded' , function(){
