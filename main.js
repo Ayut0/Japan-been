@@ -314,25 +314,28 @@
     jpMap.classList.remove('disable');
   });
 
-  // Web Share API
+  // Web Share API(PC版Chrome非対応)
   const testBtn = document.getElementById('js-test');
+  // async function shareで非同期処理関数を定義
   testBtn.addEventListener('click', async function share(){
+    // APIが開かれているブラウザに対応しているかを確認
     if (!navigator.share) {
       alert('ご利用のブラウザでは共有できません。');
       return;
     }
+    // 対応している場合の処理
     try{
+      // window.navigator.shareが成功（上手く動作したときの処理）
       await window.navigator.share({
         title:'うまく反映されない',
-        text:'共有テスト',
+        text:'今までにこれだけの都道府県を訪れたよ！',
         url:location.href,
       });
-      alert('共有できました。');
+      alert('共有できました！'); // tryブロック内の処理が無事にできた場合にユーザーに通知(Promiseでいうthen method)
     }catch(e){
-      console.log(e.message);
+      alert('ごめんなさい。うまくいきませんでした、、、'); //tryブロック内で予期せぬエラーが発生した時にユーザーに通知。
     }
   });
 
-}
-
+}//  use strict
 
